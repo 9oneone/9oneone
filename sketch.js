@@ -36,13 +36,6 @@ function setup() {
   backgroundClip.play();
   backgroundClip.loop();
 }
-  player = new Player(size);
-  enemy = new Enemy(size);
-  world = new World(size);
-  
-  backgroundClip.play();
-  backgroundClip.loop();
-}
 
 function draw() {
 
