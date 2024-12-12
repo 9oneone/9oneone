@@ -1,7 +1,7 @@
 let player, enemy, world;
 let score = 0;
 let music = true;
-let size = [300, 600];
+let size = [900, 1800];
 
 let explosionImage, airplaneImage, enemyImage, towerImage, backgroundImage;
 let backgroundClip, explosionClip;
