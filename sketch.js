@@ -19,7 +19,10 @@ function preload() {
 }
 
 function setup() {
-  createCanvas(size[0], size[1]);
+  const cnv = createCanvas(size[0], size[1]);
+  const x = (windowWidth - width) / 2;
+  const y = (windowHeight - height) / 2;
+  cnv.position(x, y);
   player = new Player(size);
   enemy = new Enemy(size);
   world = new World(size);
