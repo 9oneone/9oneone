@@ -19,10 +19,23 @@ function preload() {
 }
 
 function setup() {
-  const cnv = createCanvas(size[0], size[1]);
-  const x = (windowWidth - width) / 2;
-  const y = (windowHeight - height) / 2;
+  let cnv = createCanvas(size[0], size[1]);
+  scaleFactor = windowHeight / size[1];
+  let scaledWidth = size[0] * scaleFactor;
+  let scaledHeight = size[1] * scaleFactor;
+  let x = (windowWidth - scaledWidth) / 2;
+  let y = 0;
   cnv.position(x, y);
+  cnv.style('transform', `scale(${scaleFactor})`);
+  cnv.style('transform-origin', 'top center');
+
+  player = new Player(size);
+  enemy = new Enemy(size);
+  world = new World(size);
+  
+  backgroundClip.play();
+  backgroundClip.loop();
+}
   player = new Player(size);
   enemy = new Enemy(size);
   world = new World(size);
